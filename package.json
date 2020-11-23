@@ -1,8 +1,11 @@
 {
-  "name": "SFXlog",
+  "name": "SFXBlog",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop -p 8000 -o"
+  },
   "dependencies": {
     "gatsby": "^2.27.0",
     "react": "^17.0.1",
