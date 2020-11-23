@@ -8,7 +8,6 @@ export default ({ data }) => {
   return (
     <>
       <Layout>
-        <Dump data={data} />
         {data.allMdx.nodes.map(({ fields, excerpt, frontmatter }) => (
           <Link to={`${fields.slug}`}>
             <h1>{frontmatter.title}</h1>
