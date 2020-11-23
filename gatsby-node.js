@@ -48,6 +48,8 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogPostTemplate,
         context: {
           slug: post.fields.slug,
+          previous,
+          next,
         },
       });
     });
