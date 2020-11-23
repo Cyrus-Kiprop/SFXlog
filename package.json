@@ -2,5 +2,10 @@
   "name": "SFXlog",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.27.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
 }
