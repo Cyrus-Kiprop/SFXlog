@@ -1,4 +1,5 @@
 const { createFilePath } = require("gatsby-source-filesystem");
+const path = require("path");
 
 // responsible for adding fields to existing mdx nodes in the field object
 exports.onCreateNode = ({ node, actions, getNode }) => {
