@@ -9,23 +9,34 @@ published: true
 Here is the `Dump` component!
 
 ```jsx
-import React from "react";
-const Dump = (props) => (
-  <div
-    style={{
-      fontSize: 20,
-      border: "1px solid #efefef",
-      padding: 10,
-      background: "white",
-    }}
-  >
-    {Object.entries(props).map(([key, val]) => (
-      <pre key={key}>
-        <strong style={{ color: "white", background: "red" }}>{key} 💩</strong>
-        {JSON.stringify(val, "", " ")}
-      </pre>
-    ))}
-  </div>
-);
-export default Dump;
+class Counter extends React.Component {
+  constructor() {
+    super();
+    this.state = { count: 0 };
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      this.setState((state) => ({ count: state.count + 1 }));
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    return (
+      <center>
+        <h3>{this.state.count}</h3>
+      </center>
+    );
+  }
+}
+```
+
+### here is some react code
+
+```jsx
+<h3>Hello World!</h3>
 ```

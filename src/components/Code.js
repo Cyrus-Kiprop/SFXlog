@@ -45,12 +45,25 @@ const CopyCode = styled.button`
   }
 `;
 
-const Code = ({ codeString, language }) => {
+const Code = ({ codeString, language, ...props }) => {
   const [copyButtonContent, setCopyButtonContent] = useState(false);
   const handleCopyToClipboard = () => {
     setCopyButtonContent(() => !copyButtonContent);
     copyToClipboard(codeString);
   };
+
+  console.log(props);
+  // check whether there are react live props
+  if (props["react-live"]) {
+    console.log("react code detected");
+    return (
+      <LiveProvider code={codeString} noInline={true} theme={theme}>
+        <LiveEditor />
+        <LiveError />
+        <LivePreview />
+      </LiveProvider>
+    );
+  }
 
   return (
     <Highlight
