@@ -3,6 +3,7 @@ import Dump from "../components/Dump";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 import { Layout } from "../components/Layout";
 
@@ -15,9 +16,30 @@ const Image = styled(Img)`
 `;
 
 export default ({ data }) => {
+  const {
+    title,
+    siteName,
+    description,
+    image,
+    siteUrl,
+    siteLanguage,
+    siteLocale,
+    twitterUsername,
+  } = useSiteMetadata();
   return (
     <>
       <Layout>
+        <Dump
+          title={title}
+          titleTemplate={siteName}
+          titleSeparator={`-`}
+          description={description || "nothin’"}
+          image={`${siteUrl}${image}`}
+          pathname={siteUrl}
+          siteLanguage={siteLanguage}
+          siteLocale={siteLocale}
+          twitterUsername={twitterUsername}
+        />
         {data.allMdx.nodes.map(({ fields, excerpt, frontmatter }) => (
           <Link to={`${fields.slug}`}>
             {!!frontmatter.cover ? (
