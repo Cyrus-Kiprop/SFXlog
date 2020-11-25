@@ -15,7 +15,7 @@ export const Pre = styled.pre`
   min-height: 284px;
   max-height: 75vh;
   max-width: calc(100% + 64px);
-  font-family: var(--font-family-mono);
+  /* font-family: var(--font-family-mono); */
   & .token-line {
     line-height: 1.3em;
     height: 1.3em;
@@ -62,7 +62,7 @@ const Code = ({ codeString, language }) => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <Pre className={className} style={style}>
           <CopyCode onClick={handleCopyToClipboard}>
-            {copyButtonContent ? "copied" : "copy"}
+            {copyButtonContent ? "copied!" : "copy"}
           </CopyCode>
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })}>
