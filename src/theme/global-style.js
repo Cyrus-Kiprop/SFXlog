@@ -251,7 +251,12 @@ html {
     --syntax-fn: rgb(0, 190, 255);
     --prefers-dark: true;
     --scrollbar-width: 12px;
-    
+    --font-weight-bold: 500;
+    --font-weight-medium: 400;
+    --font-weight-light: 300;
+    --font-family: "Wotfard",Futura,-apple-system,sans-serif;
+    --font-family-mono: "League Mono","Fira Mono",monospace;
+    --reach-dialog: 1; 
 }
 *, *:before, *:after {
     box-sizing: inherit;
