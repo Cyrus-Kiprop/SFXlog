@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
+import { SEO } from "react-seo-component";
 
 import { Layout } from "../components/Layout";
 
