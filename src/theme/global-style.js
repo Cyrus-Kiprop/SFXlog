@@ -201,7 +201,7 @@ html {
     --webkit-box-sizing: border-box;
     --moz-box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-family: ${({ theme }) => theme.font.fira};
     font-size: ${({ theme }) => theme.fontSize.lg};
     color: ${({ theme }) => theme.colours.gray[900]};
@@ -264,6 +264,7 @@ html {
 body {
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
-    background-color: ${({ theme }) => theme.colours.white};
+    /* background-color: ${({ theme }) => theme.colours.white}; */
+    background-color: var(--color-background);
 }
 `;

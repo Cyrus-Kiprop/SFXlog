@@ -7,6 +7,9 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata";
 import { SEO } from "react-seo-component";
 
 import { Layout } from "../components/Layout";
+import { Header } from "../components/Header/Header";
+import HeroSwoopWrapper from "../components/Header/heroSwoopWrapper";
+import Avatar from "../components/Header/Avatar";
 
 const IndexWrapper = styled.main``;
 
@@ -30,7 +33,7 @@ export default ({ data }) => {
   return (
     <>
       <Layout>
-        <Dump
+        {/* <Dump
           title={title}
           titleTemplate={siteName}
           titleSeparator={`-`}
@@ -40,7 +43,13 @@ export default ({ data }) => {
           siteLanguage={siteLanguage}
           siteLocale={siteLocale}
           twitterUsername={twitterUsername}
-        />
+
+        /> */}
+
+        <Header siteTitle={title} siteDescription={description}>
+          <HeroSwoopWrapper />
+          <Avatar />
+        </Header>
         {data.allMdx.nodes.map(({ fields, excerpt, frontmatter }) => (
           <Link to={`${fields.slug}`}>
             {!!frontmatter.cover ? (

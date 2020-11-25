@@ -24,7 +24,7 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO
+      {/* <SEO
         title={title}
         titleSeparator={`-`}
         image={image}
@@ -38,7 +38,7 @@ export default ({ data, pageContext }) => {
         article={true}
         publishedDate={date}
         modifiedDate={new Date(Date.now()).toISOString()}
-      />{" "}
+      />{" "} */}
       <h1>{frontmatter.title}</h1>
       <p>{frontmatter.date}</p>
       <MDXRenderer>{body}</MDXRenderer>
