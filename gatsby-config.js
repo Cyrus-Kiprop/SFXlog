@@ -3,6 +3,12 @@ const path = require("path");
 const siteMetadata = {
   title: `The Localhost Blog`,
   description: `This is my coding blog where I write about my coding journey.`,
+  image: `/default-site-image.jpg`,
+  siteUrl: `http://localhost:8000`,
+  siteLanguage: `en_Gb`,
+  siteLocale: `en_gb`,
+  twitterUsername: `@kipropJS`,
+  authorName: `Cyrus Kiprop`,
 };
 
 module.exports = {
@@ -11,6 +17,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
