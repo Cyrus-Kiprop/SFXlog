@@ -1,6 +1,10 @@
 import { MDXProvider } from "@mdx-js/react";
 import React from "react";
 import Code from "./src/components/Code";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, theme } from "./src/theme/global-style";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const components = {
   pre: ({ children: { props } }) => {
@@ -16,5 +20,8 @@ const components = {
   },
 };
 export const WrapRootElement = ({ element }) => (
-  <MDXProvider components={components}>{element}</MDXProvider>
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    <MDXProvider components={components}>{element}</MDXProvider>
+  </ThemeProvider>
 );
