@@ -14,10 +14,12 @@ const siteMetadata = {
 module.exports = {
   siteMetadata,
   plugins: [
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {
