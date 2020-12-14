@@ -257,6 +257,27 @@ html {
     --font-family: "Wotfard",Futura,-apple-system,sans-serif;
     --font-family-mono: "League Mono","Fira Mono",monospace;
     --reach-dialog: 1; 
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -265,6 +286,23 @@ body {
     line-height: ${({ theme }) => theme.lineHeight.relaxed};
     letter-spacing: ${({ theme }) => theme.letterSpacing.wide};
     /* background-color: ${({ theme }) => theme.colours.white}; */
-    background-color: var(--color-background);
+    background-color: #100e17;
+
+  
+    font-size: 14px;
+   
+    line-height: 24px;
+    font-weight: 500;
+    /* overflow-x: hidden !important; */
+    text-align: left;
+    position: relative;
+    color: #999999;
+    opacity: 0.9;
 }
+
+.dark-bg {
+    background-color: #202026;
+}
+
+
 `;
